@@ -18,7 +18,8 @@
 }
 
 #topbar .navbar-nav > li > a, .navbar-brand {
-    padding-top:5px !important; padding-bottom:0 !important;
+    padding-top:5px !important; 
+    padding-bottom:0 !important;
     height: 30px;
 }
 
@@ -26,6 +27,21 @@
 
 .navbar-top-links {
     margin-right: 0;
+}
+
+.nav > li.dropdown.active.open > a, 
+.nav > li.dropdown.active.open > ul.dropdown-menu a:hover,
+.nav > li.dropdown.open > a, 
+.nav > li.dropdown.open > ul.dropdown-menu a:hover
+{
+  color: #fff;
+  background-color: black;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	color: white;
+	background-color: black;
 }
 
 .navbar-top-links li {
@@ -37,7 +53,10 @@
 }
 
 .navbar-top-links li a {
-    min-height: 30px;
+	color: gray;
+	padding-top: 5px; 
+	padding-bottom: 0;
+	height: 30px;
 }
 
 .navbar-top-links .dropdown-menu li {
@@ -56,28 +75,17 @@
     white-space: normal;
 }
 
-.navbar-top-links .dropdown-messages,
-.navbar-top-links .dropdown-tasks,
-.navbar-top-links .dropdown-alerts {
-    width: 310px;
+.navbar-top-links .dropdown-login {
+	background-color: #222;
+	width: 120px;
     min-width: 0;
-}
-
-.navbar-top-links .dropdown-messages {
-    margin-left: 5px;
-}
-
-.navbar-top-links .dropdown-tasks {
-    margin-left: -59px;
-}
-
-.navbar-top-links .dropdown-alerts {
-    margin-left: -123px;
-}
-
-.navbar-top-links .dropdown-user {
     right: 0;
     left: auto;
+}
+
+.navbar-top-links .dropdown-login .divider {
+	margin: auto;
+	background: gray;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
