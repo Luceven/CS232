@@ -32,43 +32,45 @@
 <body>
 
     <div id="wrapper">
-    	<!-- Navigation -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+    
+        <!-- Top Navigation Bar-->
+        <nav class="navbar navbar-inverse navbar-static-top" id="topbar" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html">大咖文书</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">大咖文书</a>
             </div>
+            <!-- /.navbar-header -->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="contactus.html">联系我们</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登陆 <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="signin.html">Sign in</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Sign out</a></li>
-                  </ul>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="contactus.html">联系我们</a>
                 </li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">登录<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-login">
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Sign in</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Sign out</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
         </nav>
 
-    	<!-- 公司logo -->
+        <!-- 公司logo -->
         <div class="container">
-      		<div class="jumbotron">
-        		<h1>Logo Here</h1>
-        		<p>Some discriptions here</p>
-      		</div>
+            <div class="jumbotron">
+                <h1>Logo Here</h1>
+                <p>Some discriptions here</p>
+            </div>
         </div>
         <!-- /.公司logo -->
 
@@ -77,20 +79,20 @@
             <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapase" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapase" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="sidebar-collapase">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
-                <li><a href="application.html">留学申请</a></li>
-                <li><a href="application.html">诊断辅导</a></li>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="application.html">留学申请</a></li>
+                    <li><a href="application.html">诊断辅导</a></li>
                 <li><a href="application.html">资源下载</a></li>
               </ul>
               <form class="navbar-form navbar-right" role="search">
@@ -98,7 +100,7 @@
                   <input type="text" class="form-control" placeholder="关键词搜索">
                 </div>
                 <button class="btn btn-default" type="button">
-                	<i class="fa fa-search"></i>
+                  <i class="fa fa-search"></i>
                 </button>
               </form>
             </div><!-- /.navbar-collapse -->
@@ -106,17 +108,17 @@
         </nav>
 
         <nav class="navbar-default sidebar col-sm-3" role="navigation">
-        	<div class="sidebar-nav-fixed affix navbar-collapse">
+          <div class="sidebar-nav-fixed affix navbar-collapse">
                 <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
-                	<li><a href="aboutus.html">关于大咖</a></li>
+                  <li><a href="aboutus.html">关于大咖</a></li>
                     <li>
-                      <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu">大咖成员<span class="caret arrow"></span></a>
-                      <ul class="nav nav-stacked collapse left-submenu" id="item1">
-                        <li><a href="eassymembers.html">文书团队</a></li>
-                        <li><a href="activitymembers.html">活动和讲座老师</a></li>
-                      </ul>
+                        <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu">大咖成员<span class="caret arrow"></span></a>
+                        <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                            <li><a href="eassymembers.html">文书团队</a></li>
+                            <li><a href="activitymembers.html">活动和讲座老师</a></li>
+                        </ul>
                     </li>
-          		</ul>
+              </ul>
             </div>
         </nav>
         <div id="page-wrapper">
@@ -297,10 +299,10 @@
                               <br/>
                               <p>长期从事跨文化研究 ，熟悉西方文化与东亚文化的区别，尤其对于媒体文化有深入研究。另外，有在中国从事语言教学工作的丰富经验。究工作。</p>
                               <br/>
-                              <p>Name:			Jamie McGeorge
-                              <p>Nationality:		US citizen</p>
-                              <p>Undergraduate:		University of Missouri-Columbia</p>
-                              <p>Major:			English</p>
+                              <p>Name:      Jamie McGeorge
+                              <p>Nationality:   US citizen</p>
+                              <p>Undergraduate:   University of Missouri-Columbia</p>
+                              <p>Major:     English</p>
                               <p>English major Jamie is a highly qualified teacher teaching English as a Second Language and ‘Advanced Placement’ (‘AP’) literature classes.</p>
 
                           </div>
