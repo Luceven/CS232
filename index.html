@@ -30,136 +30,147 @@
 </head>
 
 <body>
-	<!-- Navigation -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">大咖文书</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="contactus.html">联系我们</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登陆 <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="signin.html">Sign in</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Sign out</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+    <div id="wrapper">
 
-    <div id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-          <div class="item active">
-              <img src="http://1.bp.blogspot.com/-BUrT0CP-6nQ/U1prUuv6VjI/AAAAAAAAFbY/a6PUNgNhSWM/s1600/1500x500-New-York-Skyline-Twitter-Header0017.jpg" style="width:100%" class="img-responsive">
-              <div class="container">
-                  <div class="carousel-caption">
-                       <h1>Bootstrap 3 Carousel</h1>
-
-                      <p>Pictures slide with overlapping words</p>
-                      <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
-
-                      </p>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="http://1.bp.blogspot.com/-jBZKbiHI_2U/U1pszgzFAbI/AAAAAAAAFcI/8xrxWuBse9o/s1600/1500x500-New-York-Skyline-Twitter-Header0024.jpg" class="img-responsive">
-              <div class="container">
-                  <div class="carousel-caption">
-                       <h1>Each Slide can be different</h1>
-
-                      <p>I just need some one to pick the pictures and words</p>
-                      <p><a class="btn btn-large btn-primary" href="#">Learn more</a>
-
-                      </p>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="http://mooxidesign.com/wp-content/uploads/2014/04/New-york-1500x500.jpg" class="img-responsive">
-              <div class="container">
-                  <div class="carousel-caption">
-                       <h1>Percentage-based sizing</h1>
-
-                      <p>This Site is fully responsive and adjusts to the size of the browser your using. Meaning that it looks great on smart-phones</p>
-                      <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Controls -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="icon-prev"></span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="icon-next"></span>
-      </a>
-    </div>
-    <!-- /.carousel -->
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
-            <li><a href="application.html">留学申请</a></li>
-            <li><a href="application.html">诊断辅导</a></li>
-            <li><a href="application.html">资源下载</a></li>
-          </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="关键词搜索">
+        <!-- Top Navigation Bar-->
+        <nav class="navbar navbar-inverse navbar-static-top" id="topbar" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">大咖文书</a>
             </div>
-            <button class="btn btn-default" type="button">
-            	<i class="fa fa-search"></i>
-            </button>
-          </form>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="contactus.html">联系我们</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">登录<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+        </nav>
+
+        <!-- carousel -->
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://1.bp.blogspot.com/-BUrT0CP-6nQ/U1prUuv6VjI/AAAAAAAAFbY/a6PUNgNhSWM/s1600/1500x500-New-York-Skyline-Twitter-Header0017.jpg" style="width:100%" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Bootstrap 3 Carousel</h1>
+
+                            <p>Pictures slide with overlapping words</p>
+                            <p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://1.bp.blogspot.com/-jBZKbiHI_2U/U1pszgzFAbI/AAAAAAAAFcI/8xrxWuBse9o/s1600/1500x500-New-York-Skyline-Twitter-Header0024.jpg" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Each Slide can be different</h1>
+
+                            <p>I just need some one to pick the pictures and words</p>
+                            <p><a class="btn btn-large btn-primary" href="#">Learn more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://mooxidesign.com/wp-content/uploads/2014/04/New-york-1500x500.jpg" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Percentage-based sizing</h1>
+
+                            <p>This Site is fully responsive and adjusts to the size of the browser your using. Meaning that it looks great on smart-phones</p>
+                            <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+            </a>
+        </div>
+        <!-- /.carousel -->
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
+                <li><a href="application.html">留学申请</a></li>
+                <li><a href="application.html">诊断辅导</a></li>
+                <li><a href="application.html">资源下载</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="关键词搜索">
+                </div>
+                <button class="btn btn-default" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+    </div>
 
     <script>
     $('#myCarousel').carousel({
-    interval: 3000,
-    cycle: true
-});
+        interval: 3000,
+        cycle: true
+    });
     </script>
 
-    <!-- jQuery Version 1.11.1 -->
+    <!-- jQuery Version 2.6.4 -->
     <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->

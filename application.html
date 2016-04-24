@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>大咖文书</title>
+    <title>大咖-留学申请</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,108 +31,113 @@
 
 <body>
 
-  <div id="wrapper">
-  	<!-- Navigation -->
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">大咖文书</a>
-          </div>
+    <div id="wrapper">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Top Navigation Bar-->
+        <nav class="navbar navbar-inverse navbar-static-top" id="topbar" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">大咖文书</a>
+            </div>
+            <!-- /.navbar-header -->
+
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="contactus.html">联系我们</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登录 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="signin.html">Sign in</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Sign out</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-
-  	<!-- Page Content -->
-      <div class="container">
-    		<div class="jumbotron">
-      		<h1>Logo Here</h1>
-      		<p>Some discriptions here</p>
-    		</div>
-      </div>
-      <!-- /.container -->
-
-      <!-- Navigation -->
-      <nav class="navbar navbar-default">
-          <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="aboutus.html">关于我们</a></li>
-              <li class="active"><a href="application.html">留学申请<span class="sr-only">(current)</span></a></li>
-              <li><a href="application.html">诊断辅导</a></li>
-              <li><a href="application.html">资源下载</a></li>
-            </ul>
-            <form class="navbar-form navbar-right" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="关键词搜索">
-              </div>
-              <button class="btn btn-default" type="button">
-              	<i class="fa fa-search"></i>
-              </button>
-            </form>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-
-      <nav class="navbar-default sidebar col-sm-3" role="navigation">
-      	<div class="sidebar-nav-fixed affix navbar-collapse">
-              <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
-                <li class="active"><a href="application.html">扬帆起航</a></li>
                 <li>
-                  <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu">美国留学<span class="fa arrow"></span></a>
-                  <ul class="nav nav-stacked collapse nav-pills" id="item1">
-                  	<li><a href="#">申请材料</a></li>
-                    <li><a href="#">北美本科</a></li>
-                    <li><a href="#">北美研究生</a></li>
-                  </ul>
+                    <a href="contactus.html">联系我们</a>
                 </li>
-                <li>
-                  <a href="#" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu">加拿大留学<span class="fa arrow"></span></a>
-                  <ul class="nav nav-stacked collapse nav-pills" id="item3">
-                  	<li><a href="#">申请材料</a></li>
-                    <li><a href="#">加拿大本科</a></li>
-                    <li><a href="#">加拿大研究生</a></li>
-                  </ul>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">登录<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
                 </li>
-        		  </ul>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+        </nav>
+
+        <!-- 公司logo -->
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Logo Here</h1>
+                <p>Some discriptions here</p>
+            </div>
         </div>
-      </nav>
+        <!-- /.公司logo -->
 
-      <div id="page-wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="aboutus.html">关于我们</a></li>
+                <li class="active"><a href="application.html">留学申请 <span class="sr-only">(current)</span></a></li>
+                <li><a href="application.html">诊断辅导</a></li>
+                <li><a href="application.html">资源下载</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="关键词搜索">
+                </div>
+                <button class="btn btn-default" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+
+        <nav class="navbar-default sidebar col-sm-3" role="navigation">
+            <div class="sidebar-nav-fixed affix navbar-collapse">
+                <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
+                    <li class="active"><a href="aboutus.html">相关考试</a></li>
+                    <li>
+                      <a href="#" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu">美国留学<span class="caret arrow"></span></a>
+                      <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                        <li><a href="#">美国本科</a></li>
+                        <li><a href="#">美国研究生</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">加拿大留学<span class="caret arrow"></span></a>
+                      <ul class="nav nav-stacked collapse left-submenu" id="item2">
+                        <li><a href="#">加拿大本科</a></li>
+                        <li><a href="#">加拿大研究生</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">扬帆起航</h1>
+                    <h1 class="page-header">相关考试</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -141,12 +146,33 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            为何留学？
+                          托福-TOEFL
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="flot-chart">
-                                （待更新文案）
+                              <img src="img/toefl.jpg" alt="托福" style="width:417px;height:267px;float:left">
+                                <p><a href="http://www.ets.org/toefl">托福</a>是由美国教育测验服务社（ETS）举办的英语能力考试，全名为“检定非英语为母语者的英语能力考试”，中文音译为“托福”。美国所有院校都接受托福成绩，加拿大大部分院校接受托福成绩。</p>
+                                <p>TOEFL有三种，分别是： pbt—paper based test 纸考 677, cbt—computer based test 机考 300, ibt—internet based test 网考 120, 以及目前大部分考生参加的新托福考试。新托福由四部分组成，分别是阅读（Reading）、听力(Listening）、口试（Speaking）、写作（Writing）。每部分满分30分，整个试题满分120分。</p>
+                                <p>托福在中国大陆一共有133个考场，考试的有效期为两年，是从考试日期开始计算的。托福网考要求考生参加考试时须携带有本人签字的护照或同时携带两类证件，其中至少有一种是一类证件。</p>
+                                <footer>来自<a href="http://baike.baidu.com/view/1324.htm">百度百科-托福</a></footer>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          雅思-IELTS
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                              <img src="img/ielts.png" alt="雅思" style="width:300px;height:300px;float:right">
+                                <p><a href="https://www.ielts.org/default.aspx">雅思考试（IELTS）</a>，外文名International English Language Testing System，由剑桥大学考试委员会外语考试部、英国文化协会及IDP教育集团共同管理，是一种针英语能力，为打算到使用英语的国家学习、工作或定居的人们设置的英语水平考试。</p>
+                                <p>雅思考试分学术类和培训类两种，分别针对申请留学的学生和计划在英语语言国家参加工作或移民的人士。考试分听、说、读、写四个部分，总分9分。</p>
+                                <p>英国以及加拿大所有院校均接受雅思成绩。截止2014年，在美国共有超过3,000所院校认可雅思成绩，包括所有的常青藤盟校（哈佛、普林斯顿、耶鲁、宾夕法尼亚、布朗、哥伦比亚、康奈尔、达特茅斯）和大多数美国大学排名前100的院校。</p>
+                                <footer>来自<a href="http://baike.baidu.com/view/1944.htm">百度百科-雅思</a></footer>
                             </div>
                         </div>
                         <!-- /.panel-body -->
@@ -158,11 +184,17 @@
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
+
     </div>
-    <!-- /#wrapper -->
 
+    <script>
+    $('#myCarousel').carousel({
+        interval: 3000,
+        cycle: true
+    });
+    </script>
 
-    <!-- jQuery Version 1.11.1 -->
+    <!-- jQuery Version 2.6.4 -->
     <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
