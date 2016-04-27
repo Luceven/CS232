@@ -8,9 +8,10 @@ $(function() {
     var $msgAnimateTime = 150;
     var $msgShowTime = 2000;
 
-    $("form").submit(function () {
+    $("form").submit(function(e) {
         switch(this.id) {
             case "login-form":
+                // e.preventDefault();
                 var $lg_username=$('#login_username').val();
                 var $lg_password=$('#login_password').val();
                 if ($lg_username == "ERROR") {
@@ -18,7 +19,17 @@ $(function() {
                 } else {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
                 }
-                return false;
+                $.ajax( {
+                    type: "POST",
+                    url: "server_side/server_processing.php",
+                    data: {username: $lg_username, password: $lg_password},
+                    success: function(text) {
+                        $('a#loginDrop').text($lg_username);
+                        $('#beforeLogin').hide();
+                        $('#afterLogin').show();
+                        $('#login-modal').modal('hide');
+                    }
+                } );
                 break;
             case "lost-form":
                 var $ls_email=$('#lost_email').val();
@@ -43,7 +54,7 @@ $(function() {
             default:
                 return false;
         }
-        return false;
+        e.preventDefault();
     });
 
     $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
