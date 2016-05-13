@@ -416,3 +416,29 @@
 }
 
 /*login CSS Ends*/
+
+/*Begin cube CSS*/
+
+#conleft {
+  background-color:#ffff99;
+  height:1000px;
+  width:20%;
+  float:left;
+}
+
+#conright {
+  background-color:#EEEEEE;
+  height:1000px;
+  width:80%;
+  float:left;
+}
+
+#cube{
+  height: 550px;
+  width: 25%;
+  float: left;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}

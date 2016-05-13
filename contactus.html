@@ -30,6 +30,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style type="text/css">
+        html,body{margin:0;padding:0;}
+        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+
 </head>
 
 <body>
@@ -45,20 +53,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">大咖文书</a>
+                <a class="navbar-brand" href="index.html">Daka Essay Center/大咖文书</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <a href="contactus.html">联系我们</a>
+                <li class="active">
+                    <a href="contactus.html">Contact us/联系我们</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">注册与登录<i class="fa fa-caret-down"></i></a>
-                    <ul class="dropdown-menu dropdown-login">
-                        <li><a href="#" data-toggle="modal" data-target="#login-modal">Sign in/up</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Sign out</a></li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="loginDrop">Sign in/登录<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-login" >
+                        <li><a id="beforeLogin" data-toggle="modal" data-target="#login-modal">Sign in/up</a></li>
+                        <li><a id="afterLogin" style="display: none">Sign out</a></li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -79,130 +86,162 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="aboutus.html">关于我们</a></li>
-                <li class="active"><a href="application.html">留学申请 <span class="sr-only">(current)</span></a></li>
-                <li><a href="application.html">诊断辅导</a></li>
-                <li><a href="application.html">资源下载</a></li>
-              </ul>
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="关键词搜索">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <button class="btn btn-default" type="button">
-                    <i class="fa fa-search"></i>
-                </button>
-              </form>
-            </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="aboutus.html">About us/关于我们<span class="sr-only"></span></a></li>
+                        <li><a href="application.html">Study abroad/留学申请</a></li>
+                        <li><a href="course.html">Courses/诊断辅导</a></li>
+                        <li><a href="resource.html">Resource/资源下载</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="关键词搜索">
+                      </div>
+                      <button class="btn btn-default" type="button">
+                          <i class="fa fa-search"></i>
+                      </button>
+                    </form>
+                </div>
             <!-- /.navbar-collapse -->
-          </div>
-          <!-- /.container-fluid -->
+            </div>
+        <!-- /.container-fluid -->
         </nav>
+
+        <!-- /.contact information -->
+        <div id="wrapper">
+          <div id="conleft">
+          <br/>
+            <h3>&nbsp;&nbsp;&nbsp;大咖文书地址</h3>
+            <br/>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;桐梓林东路3号锦绣花园西区5-3-302</p>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;乘地铁：</p>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;桐梓林站B站出口沿桐梓林北路</p>
+            <p>&nbsp;&nbsp;&nbsp;向桐梓林内走（向西）步行约10分</p>
+            <p>&nbsp;&nbsp;&nbsp;钟至桐梓林北路和桐梓林东路的</p>
+            <p>&nbsp;&nbsp;&nbsp;十字路口，左拐约20米即到。</p>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;乘公交车：</p>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;桐梓林B站出口出来后</p>
+            <p>&nbsp;&nbsp;&nbsp;在旁边的公交站坐1097路</p>
+            <p>&nbsp;&nbsp;&nbsp;（每10分钟一班），坐2站下车。</p>
+          </div>
+
+          <div id="conright">
+            <center>
+              <p>For</p>
+              <p>The</p>
+              <del>Horde</del>
+              <p>Location</p>
+              <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+            </center>
+          </div>
+        </div>
 
         <!-- BEGIN # MODAL LOGIN -->
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        	<div class="modal-dialog">
-      			<div class="modal-content">
-      				<div class="modal-header" align="center">
-      					<img class="img-circle" id="img_logo" src="#">
-      					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-      					</button>
-  				    </div>
+            <div class="modal-dialog">
+               <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="img/login.png">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
 
-              <!-- Begin # DIV Form -->
-              <div id="div-forms">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
 
-                <!-- Begin # Login Form -->
-                <form id="login-form">
-                  <div class="modal-body">
-                		<div id="div-login-msg">
-                      <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                      <span id="text-login-msg">请输入用户名与密码</span>
-                    </div>
-                		<input id="login_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                		<input id="login_password" class="form-control" type="password" placeholder="Password" required>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">记住我
-                      </label>
-                    </div>
-        		    	</div>
-        	        <div class="modal-footer">
-                    <div>
-                      <button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
-                    </div>
-          	    	  <div>
-                      <button id="login_lost_btn" type="button" class="btn btn-link">忘记密码？</button>
-                      <button id="login_register_btn" type="button" class="btn btn-link">新用户注册</button>
-                    </div>
-        	        </div>
-                </form>
-                <!-- End # Login Form -->
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                        <span id="text-login-msg">Username and Password/用户名与密码</span>
+                                </div>
+                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                                <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Remember me/记住我
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login/登录</button>
+                                </div>
+                                <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Register/新用户注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End # Login Form -->
 
-                <!-- Begin | Lost Password Form -->
-                <form id="lost-form" style="display:none;">
-      		       <div class="modal-body">
-      			      <div id="div-lost-msg">
-                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                    <span id="text-lost-msg">请输入您的邮箱地址</span>
-                  </div>
-      			      <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-        			   </div>
-      	         <div class="modal-footer">
-                  <div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">发送</button>
-                  </div>
-                  <div>
-                    <button id="lost_login_btn" type="button" class="btn btn-link">登录</button>
-                    <button id="lost_register_btn" type="button" class="btn btn-link">注册</button>
-                  </div>
-      	         </div>
-                </form>
-                <!-- End | Lost Password Form -->
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
+                            <div class="modal-body">
+                                <div id="div-lost-msg">
+                                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-lost-msg">Email address/邮箱地址</span>
+                                </div>
+                                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send/发送</button>
+                                </div>
+                                <div>
+                                    <button id="lost_login_btn" type="button" class="btn btn-link">Login/登录</button>
+                                    <button id="lost_register_btn" type="button" class="btn btn-link">Register/注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Lost Password Form -->
 
-                <!-- Begin | Register Form -->
-                <form id="register-form" style="display:none;">
-          		    <div class="modal-body">
-            				<div id="div-register-msg">
-                      <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                      <span id="text-register-msg">注册新用户</span>
+                        <!-- Begin | Register Form -->
+                        <form id="register-form" style="display:none;">
+                            <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register new account/注册新用户</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Register/注册</button>
+                                </div>
+                                <div>
+                                    <button id="register_login_btn" type="button" class="btn btn-link">Login/登录</button>
+                                    <button id="register_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Register Form -->
                     </div>
-      		    				<input id="register_username" class="form-control" type="text" placeholder="Username" required>
-                      <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                      <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-                  </div>
-          		    <div class="modal-footer">
-                    <div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">注册</button>
-                    </div>
-                    <div>
-                        <button id="register_login_btn" type="button" class="btn btn-link">登录</button>
-                        <button id="register_lost_btn" type="button" class="btn btn-link">忘记密码？</button>
-                    </div>
-          		    </div>
-                </form>
-                <!-- End | Register Form -->
-
-              </div>
-              <!-- End # DIV Form -->
-
-    			</div>
-    		</div>
-    	</div>
-      <!-- END # MODAL LOGIN -->
+                    <!-- End # DIV Form -->
+            </div>
+          </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
 
     </div>
     <!-- /#wrapper -->
@@ -222,6 +261,106 @@
 
     <!-- login-modal -->
     <script src="js/login.js"></script>
+
+
+    <script type="text/javascript">
+    //创建和初始化地图函数：
+      function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+      }
+
+    //创建地图函数：
+      function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(104.068334,30.620903);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+      }
+
+    //地图事件设置函数：
+      function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+      }
+
+    //地图控件添加函数：
+      function addMapControl(){
+        //向地图中添加缩放控件
+	       var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	       var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	       var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	        map.addControl(ctrl_sca);
+        }
+
+    //标注点数组
+      var markerArr = [{title:"大咖文书",content:"我的备注",point:"104.067966|30.621338",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		    ];
+    //创建marker
+      function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			         var iconImg = createIcon(json.icon);
+               var marker = new BMap.Marker(point,{icon:iconImg});
+			            var iw = createInfoWindow(i);
+			               var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			                  marker.setLabel(label);
+                        map.addOverlay(marker);
+                        label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+                      });
+
+			                   (function(){
+				                       var index = i;
+				                           var _iw = createInfoWindow(i);
+				                               var _marker = marker;
+				                                   _marker.addEventListener("click",function(){
+				                                         this.openInfoWindow(_iw);
+			                                            });
+			                                               _iw.addEventListener("open",function(){
+				                                                   _marker.getLabel().hide();
+			                                                      })
+			                                                         _iw.addEventListener("close",function(){
+				                                                             _marker.getLabel().show();
+			                                                                })
+				                                                                  label.addEventListener("click",function(){
+				                                                                        _marker.openInfoWindow(_iw);
+			                                                                           })
+				                                                                             if(!!json.isOpen){
+					                                                                                  label.hide();
+					                                                                                       _marker.openInfoWindow(_iw);
+				                                                                                           }
+			                                                                                              })()
+                                                                                                  }
+                                                                                                }
+    //创建InfoWindow
+      function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+      }
+    //创建一个Icon
+      function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+      }
+
+      initMap();//创建和初始化地图
+      </script>
+</html>
 
 </body>
 

@@ -45,21 +45,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">大咖文书</a>
+                <a class="navbar-brand" href="index.html">Daka Essay Center/大咖文书</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <a href="contactus.html">联系我们</a>
+                    <a href="contactus.html">Contact us/联系我们</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">注册与登录<i class="fa fa-caret-down"></i></a>
-                    <ul class="dropdown-menu dropdown-login">
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Sign in</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Sign out</a></li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="loginDrop">Sign in/登录<i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-login" >
+                        <li><a id="beforeLogin" data-toggle="modal" data-target="#login-modal">Sign in/up</a></li>
+                        <li><a id="afterLogin" style="display: none">Sign out</a></li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -68,61 +66,63 @@
             <!-- /.navbar-top-links -->
         </nav>
 
-    	<!-- 公司logo -->
+        <!-- 公司logo -->
         <div class="container">
-      		<div class="jumbotron">
-        		<h1>Logo Here</h1>
-        		<p>Some discriptions here</p>
-      		</div>
+            <div class="jumbotron">
+                <h1>Logo Here</h1>
+                <p>Some discriptions here</p>
+            </div>
         </div>
         <!-- /.公司logo -->
 
         <!-- Navigation -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapase" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="sidebar-collapase">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
-                <li><a href="application.html">留学申请</a></li>
-                <li><a href="application.html">诊断辅导</a></li>
-                <li><a href="application.html">资源下载</a></li>
-              </ul>
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="关键词搜索">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <button class="btn btn-default" type="button">
-                	<i class="fa fa-search"></i>
-                </button>
-              </form>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="aboutus.html">About us/关于我们<span class="sr-only"></span></a></li>
+                        <li><a href="application.html">Study abroad/留学申请</a></li>
+                        <li><a href="course.html">Courses/诊断辅导</a></li>
+                        <li><a href="resource.html">Resource/资源下载</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="关键词搜索">
+                      </div>
+                      <button class="btn btn-default" type="button">
+                          <i class="fa fa-search"></i>
+                      </button>
+                    </form>
+                </div>
+            <!-- /.navbar-collapse -->
+            </div>
+        <!-- /.container-fluid -->
         </nav>
 
         <!-- Side Bar -->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav nav-pills nav-stacked" id="side-menu">
-                    <li><a href="aboutus.html">关于大咖</a></li>
+                    <li><a href="aboutus.html">About Daka/关于大咖</a></li>
                     <li>
-                        <a href="#">大咖成员<span class="fa arrow"></span></a>
+                        <a href="#">Our members/大咖成员<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="essaymembers.html">文书团队</a>
+                                <a href="essaymembers.html">Team/文书团队</a>
                             </li>
                             <li class="active">
-                                <a href="activitymembers.html">活动和讲座老师</a>
+                                <a href="activitymembers.html">Guests/活动和讲座老师</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -130,6 +130,97 @@
                 </ul>
             </div>
         </div>
+
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="img/login.png">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                        <span id="text-login-msg">Username and Password/用户名与密码</span>
+                                </div>
+                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                                <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Remember me/记住我
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login/登录</button>
+                                </div>
+                                <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Register/新用户注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End # Login Form -->
+
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
+                            <div class="modal-body">
+                                <div id="div-lost-msg">
+                                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-lost-msg">Email address/邮箱地址</span>
+                                </div>
+                                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send/发送</button>
+                                </div>
+                                <div>
+                                    <button id="lost_login_btn" type="button" class="btn btn-link">Login/登录</button>
+                                    <button id="lost_register_btn" type="button" class="btn btn-link">Register/注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Lost Password Form -->
+
+                        <!-- Begin | Register Form -->
+                        <form id="register-form" style="display:none;">
+                            <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register new account/注册新用户</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Register/注册</button>
+                                </div>
+                                <div>
+                                    <button id="register_login_btn" type="button" class="btn btn-link">Login/登录</button>
+                                    <button id="register_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Register Form -->
+                    </div>
+                    <!-- End # DIV Form -->
+            </div>
+          </div>
+        </div>
+        <!-- END # MODAL LOGIN -->
 
         <div id="page-wrapper">
             <div class="row">

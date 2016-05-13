@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])) {
+    header("Location: index.html");
+}
+else {
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,16 +54,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Daka Essay Center/大咖文书</a>
+                <a class="navbar-brand" href="index.html">大咖文书</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <a href="contactus.html">Contact us/联系我们</a>
+                    <a href="contactus.html">联系我们</a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" id="loginDrop">Sign in/登录<i class="fa fa-caret-down"></i></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="loginDrop">注册与登录<i class="fa fa-caret-down"></i></a>
                     <ul class="dropdown-menu dropdown-login" >
                         <li><a id="beforeLogin" data-toggle="modal" data-target="#login-modal">Sign in/up</a></li>
                         <li><a id="afterLogin" style="display: none">Sign out</a></li>
@@ -75,7 +84,6 @@
         </div>
         <!-- /.公司logo -->
 
-        <!-- Navigation -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -91,18 +99,18 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="aboutus.html">About us/关于我们<span class="sr-only"></span></a></li>
-                        <li><a href="application.html">Study abroad/留学申请</a></li>
-                        <li><a href="course.html">Courses/诊断辅导</a></li>
-                        <li class="active"><a href="resource.html">Resource/资源下载</a></li>
+                        <li><a href="aboutus.html">关于我们 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="application.html">留学申请</a></li>
+                        <li><a href="course.html">诊断辅导</a></li>
+                        <li class="active"><a href="resource.php">资源下载</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
-                      <div class="form-group">
-                          <input type="text" class="form-control" placeholder="关键词搜索">
-                      </div>
-                      <button class="btn btn-default" type="button">
-                          <i class="fa fa-search"></i>
-                      </button>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="关键词搜索">
+                    </div>
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
                     </form>
                 </div>
             <!-- /.navbar-collapse -->
@@ -110,116 +118,25 @@
         <!-- /.container-fluid -->
         </nav>
 
-        <!-- BEGIN # MODAL LOGIN -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-               <div class="modal-content">
-                    <div class="modal-header" align="center">
-                        <img class="img-circle" id="img_logo" src="img/login.png">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                        </button>
-                    </div>
 
-                    <!-- Begin # DIV Form -->
-                    <div id="div-forms">
-
-                        <!-- Begin # Login Form -->
-                        <form id="login-form">
-                            <div class="modal-body">
-                                <div id="div-login-msg">
-                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                        <span id="text-login-msg">Username and Password/用户名与密码</span>
-                                </div>
-                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                                <input id="login_password" class="form-control" type="password" placeholder="Password" required>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">Remember me/记住我
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Login/登录</button>
-                                </div>
-                                <div>
-                                    <button id="login_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
-                                    <button id="login_register_btn" type="button" class="btn btn-link">Register/新用户注册</button>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- End # Login Form -->
-
-                        <!-- Begin | Lost Password Form -->
-                        <form id="lost-form" style="display:none;">
-                            <div class="modal-body">
-                                <div id="div-lost-msg">
-                                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                    <span id="text-lost-msg">Email address/邮箱地址</span>
-                                </div>
-                                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send/发送</button>
-                                </div>
-                                <div>
-                                    <button id="lost_login_btn" type="button" class="btn btn-link">Login/登录</button>
-                                    <button id="lost_register_btn" type="button" class="btn btn-link">Register/注册</button>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- End | Lost Password Form -->
-
-                        <!-- Begin | Register Form -->
-                        <form id="register-form" style="display:none;">
-                            <div class="modal-body">
-                            <div id="div-register-msg">
-                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register new account/注册新用户</span>
-                            </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-                            </div>
-                            <div class="modal-footer">
-                                <div>
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Register/注册</button>
-                                </div>
-                                <div>
-                                    <button id="register_login_btn" type="button" class="btn btn-link">Login/登录</button>
-                                    <button id="register_lost_btn" type="button" class="btn btn-link">Forget password?/忘记密码？</button>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- End | Register Form -->
-                    </div>
-                    <!-- End # DIV Form -->
-            </div>
-          </div>
-        </div>
-        <!-- END # MODAL LOGIN -->
-
-
-        <div id="wrapper">
+        <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">&nbsp;&nbsp;&nbsp;资源下载</h1>
+                    <h1 class="page-header">资源下载</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             为何要选择ACT考试？
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <pre><a href="http://pan.baidu.com/s/1mhDTEac" target="_blank">10个让你继续坚定不移选择ACT考试的理由！</a></pre><br/>
-                            <img src="img/1.jpg" alt="ACT" style="width:100%;height:100%;">
+                            <pre><a href="http://pan.baidu.com/s/1mhDTEac">10个让你继续坚定不移选择ACT考试的理由！</a></pre><br/>
+                            今年SAT考试进行了大幅改革后，由于所有的美国大学均同等接受ACT或SAT成绩，更多的学生转向ACT考试。据统计数据显示，59.2%的学生选择参加ACT考试，而只有47.7%的学生选择了SAT考试。<br/>
                             提取码：athi
 
                         </div>
@@ -228,15 +145,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             ACT考前必读
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <pre><a href="http://pan.baidu.com/s/1jHGF7Yu" target="_blank">考场12条黄金细则+3大时间管理办法！</a></pre><br/>
-                            <img src="img/2.jpg" alt="TIME" style="width:100%;height:100%;">
+                            <pre><a href="http://pan.baidu.com/s/1jHGF7Yu">考场12条黄金细则+3大时间管理办法！</a></pre><br/>
                             提取码：jkic
                         </div>
                         <!-- /.panel-body -->
@@ -244,15 +160,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             ACT官方指南
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <pre><a href="http://pan.baidu.com/s/1jIHBHNS" target="_blank">美国高考ACT_2012-2013官方指南</a></pre><br/>
-                            <img src="img/3.png" alt="ACT" style="width:100%;height:100%;">
+                            <pre><a href="http://pan.baidu.com/s/1jIHBHNS">美国高考ACT_2012-2013官方指南</a></pre><br/>
                             提取码：7jm2
                         </div>
                         <!-- /.panel-body -->
@@ -260,15 +175,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             ACT准备工作
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1eSjnZNG" target="_blank">准备考ACT</a></pre><br/>
-                          <img src="img/4.png" alt="Pre" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1eSjnZNG">准备考ACT</a></pre><br/>
                           提取码：kfpy
                         </div>
                         <!-- /.panel-body -->
@@ -276,15 +190,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             阅读姿势
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1bpc84Lx" target="_blank">如何每分钟阅读8500字</a></pre><br/>
-                          <img src="img/5.png" alt="Reading" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1bpc84Lx">如何每分钟阅读8500字</a></pre><br/>
                           提取码：tfrt
                         </div>
                         <!-- /.panel-body -->
@@ -292,15 +205,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             ACT历年真题
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1jI0aOho" target="_blank">ACT历年真题打包</a></pre><br/>
-                          <img src="img/6.jpg" alt="ACT_P" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1jI0aOho">ACT历年真题打包</a></pre><br/>
                           提取码：xgfb
                         </div>
                         <!-- /.panel-body -->
@@ -308,15 +220,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Princeton ACT Practice Questions
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1kUWS5vT" target="_blank">Princeton 1296 ACT Practice Questions</a></pre><br/>
-                          <img src="img/7.png" alt="Princeton" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1kUWS5vT">Princeton 1296 ACT Practice Questions</a></pre><br/>
                           提取码：wuf2
                         </div>
                         <!-- /.panel-body -->
@@ -324,15 +235,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             ACT与SAT考试特点
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1nuOGVHn" target="_blank">2016年ACT与新SAT考试特点</a></pre><br/>
-                          <img src="img/8.jpeg" alt="ACT_SAT" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1nuOGVHn">2016年ACT与新SAT考试特点</a></pre><br/>
                           提取码：zpqb
                         </div>
                         <!-- /.panel-body -->
@@ -340,15 +250,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             SAT写作素材
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1kUUQDUn" target="_blank">SAT写作素材常见题目之创新类</a></pre><br/>
-                          <img src="img/9.jpg" alt="Writing" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1kUUQDUn">SAT写作素材常见题目之创新类</a></pre><br/>
                           提取码：as63
                         </div>
                         <!-- /.panel-body -->
@@ -356,15 +265,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             阅读书单
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1qYj95YO" target="_blank">阅读终极书单</a></pre><br/>
-                          <img src="img/10.png" alt="Booklist" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1qYj95YO">阅读终极书单</a></pre><br/>
                           提取码：vkdu
                         </div>
                         <!-- /.panel-body -->
@@ -372,15 +280,14 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-                <div id="cube">
+                <div class="col-lg-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             背单词
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                          <pre><a href="http://pan.baidu.com/s/1jIs9p7w" target="_blank">背单词的正确姿势</a></pre><br/>
-                          <img src="img/11.png" alt="Voca" style="width:100%;height:100%;">
+                          <pre><a href="http://pan.baidu.com/s/1jIs9p7w">背单词的正确姿势</a></pre><br/>
                           提取码：4qwt
                         </div>
                         <!-- /.panel-body -->
@@ -388,7 +295,21 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-3 -->
-
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            阅读姿势
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                          <pre><a href="http://pan.baidu.com/s/1bpc84Lx">如何每分钟阅读8500字</a></pre><br/>
+                          提取码：tfrt
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-3 -->
 
             </div>
             <!-- /.row -->
@@ -410,9 +331,10 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/daka.js"></script>
 
-    <!-- login-modal -->
-    <script src="js/login.js"></script>
-
 </body>
 
 </html>
+<?php
+}
+
+?>
