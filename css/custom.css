@@ -1,11 +1,112 @@
 #wrapper {
     width: 100%;
+    background-color: #f0f0f0
 }
 
 #page-wrapper {
     padding: 0 15px;
     min-height: 568px;
     background-color: #fff;
+}
+
+.navbar-default {
+    border-radius: 0;
+    background-color: #332f36;
+    border-color: #4d4c52;
+}
+
+.center { float: none; margin-left: auto; margin-right: auto; }
+
+.jumbotron{
+    background-color:#e0c889;
+    text-align:center;
+    margin-bottom: 0;
+}
+
+  .navbar-default .navbar-brand {
+    color: #e0c889;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #e3b65d;
+}
+.navbar-default .navbar-text {
+    color: #e0c889;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #e0c889;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #e3b65d;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    background-color: #332f36;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #e0c889;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #e3b65d;
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #e3b65d;
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #e3b65d;
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #e3b65d;
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-toggle {
+    border-color: #4d4c52;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #4d4c52;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e0c889;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #e0c889;
+}
+.navbar-default .navbar-link {
+    color: #e0c889;
+}
+.navbar-default .navbar-link:hover {
+    color: #e3b65d;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: #e0c889;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #e3b65d;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #e3b65d;
+      background-color: #4d4c52;
+  }
 }
 
 @media(min-width:768px) {
@@ -23,25 +124,26 @@
     height: 30px;
 }
 
-.navbar {min-height:30px !important;}
+.navbar {
+    min-height:30px !important;
+}
+
+.navbar-inverse {
+    background-color: #222;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #e0c889;
+}
 
 .navbar-top-links {
     margin-right: 0;
 }
 
-.nav > li.dropdown.active.open > a,
-.nav > li.dropdown.active.open > ul.dropdown-menu a:hover,
-.nav > li.dropdown.open > a,
-.nav > li.dropdown.open > ul.dropdown-menu a:hover
-{
-  color: #fff;
-  background-color: black;
-}
-
 .nav > li > a:hover,
 .nav > li > a:focus {
-	color: white;
-	background-color: black;
+   color: #e3b65d;
+   background-color: black;
 }
 
 .navbar-top-links li {
@@ -53,10 +155,19 @@
 }
 
 .navbar-top-links li a {
-	color: gray;
-	padding-top: 5px;
-	padding-bottom: 0;
-	height: 30px;
+   color: #e0c889;
+   padding-top: 5px;
+   padding-bottom: 0;
+   height: 30px;
+}
+
+.nav > li.dropdown.active.open > a,
+.nav > li.dropdown.active.open > ul.dropdown-menu a:hover,
+.nav > li.dropdown.open > a,
+.nav > li.dropdown.open > ul.dropdown-menu a:hover
+{
+  color: #e3b65d;
+  background-color: #4d4c52;
 }
 
 .navbar-top-links .dropdown-menu li {
@@ -69,6 +180,7 @@
 
 .navbar-top-links .dropdown-menu li a {
     min-height: 0;
+    color: #e0c889;
 }
 
 .navbar-top-links .dropdown-menu li a div {
@@ -76,16 +188,16 @@
 }
 
 .navbar-top-links .dropdown-login {
-	background-color: #222;
-	width: 120px;
-    min-width: 0;
-    right: 0;
-    left: auto;
+   background-color: #222;
+   width: 120px;
+   min-width: 0;
+   right: 0;
+   left: auto;
 }
 
 .navbar-top-links .dropdown-login .divider {
-	margin: auto;
-	background: gray;
+   margin: auto;
+   background: gray;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
@@ -288,7 +400,7 @@
 }
 
 #login-modal input[type=text], input[type=password] {
-	margin-top: 10px;
+   margin-top: 10px;
 }
 
 #div-login-msg,
@@ -343,102 +455,102 @@
     max-width: 100px;
 }
 
-/* #########################################
-   #    override the bootstrap configs     #
-   ######################################### */
+    /* #########################################
+       #    override the bootstrap configs     #
+       ######################################### */
 
-.modal-backdrop.in {
-    filter: alpha(opacity=50);
-    opacity: .8;
-}
+       .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
 
-.modal-content {
-    background-color: #ececec;
-    border: 1px solid #bdc3c7;
-    border-radius: 0px;
-    outline: 0;
-}
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
 
-.modal-header {
-    min-height: 16.43px;
-    padding: 15px 15px 15px 15px;
-    border-bottom: 0px;
-}
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
 
-.modal-body {
-    position: relative;
-    padding: 5px 15px 5px 15px;
-}
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
 
-.modal-footer {
-    padding: 15px 15px 15px 15px;
-    text-align: left;
-    border-top: 0px;
-}
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
 
-.checkbox {
-    margin-bottom: 0px;
-}
+    .checkbox {
+        margin-bottom: 0px;
+    }
 
-.btn {
-    border-radius: 0px;
-}
+    .btn {
+        border-radius: 0px;
+    }
 
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: none;
-}
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
 
-.btn-lg, .btn-group-lg>.btn {
-    border-radius: 0px;
-}
+    .btn-lg, .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
 
-.btn-link {
-    padding: 5px 10px 0px 0px;
-    color: #95a5a6;
-}
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
 
-.btn-link:hover, .btn-link:focus {
-    color: #2c3e50;
-    text-decoration: none;
-}
+    .btn-link:hover, .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
 
-.glyphicon {
-    top: 0px;
-}
+    .glyphicon {
+        top: 0px;
+    }
 
-.form-control {
-  border-radius: 0px;
-}
+    .form-control {
+      border-radius: 0px;
+  }
 
-/*login CSS Ends*/
+  /*login CSS Ends*/
 
-/*Begin cube CSS*/
+  /*Begin cube CSS*/
 
-#conleft {
-  background-color:#ffff99;
-  height:1000px;
-  width:20%;
-  float:left;
-}
+  #conleft {
+      background-color:#ffff99;
+      height:1000px;
+      width:20%;
+      float:left;
+  }
 
-#conright {
-  background-color:#EEEEEE;
-  height:1000px;
-  width:80%;
-  float:left;
-}
+  #conright {
+      background-color:#EEEEEE;
+      height:1000px;
+      width:80%;
+      float:left;
+  }
 
-#cube{
-  height: 550px;
-  width: 25%;
-  float: left;
-  border-top: 10px solid white;
-  border-right: 10px solid white;
-  border-bottom: 10px solid white;
-  border-left: 10px solid white;
-}
+  #cube{
+      height: 550px;
+      width: 25%;
+      float: left;
+      border-top: 10px solid white;
+      border-right: 10px solid white;
+      border-bottom: 10px solid white;
+      border-left: 10px solid white;
+  }
