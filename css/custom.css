@@ -359,3 +359,30 @@
       border-bottom: 10px solid white;
       border-left: 10px solid white;
   }
+
+#cube{
+  height: 550px;
+  width: 25%;
+  float: left;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+.forum.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.forum.fa {
+    width: 1em;
+    text-align: center;
+}
+
+.forum.table th.cell-stat {
+    width: 6em;
+}
+
+.forum.table th.cell-stat-2x {
+    width: 14em;
+}
