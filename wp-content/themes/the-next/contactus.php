@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact
+Template Name: ContactUs
 */
 
 if (!defined('ABSPATH')) exit;
