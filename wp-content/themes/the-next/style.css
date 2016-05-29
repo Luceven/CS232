@@ -251,9 +251,10 @@ pre:hover {
     height: 30px;
     display: block;
     text-align: center;
-    line-height: 30px;
+    line-height: 38px;
     border-radius: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 25px;
 }
 
 #header-1 .social-links > li a:hover, #footer-2 .social-links > li a:hover {
@@ -281,7 +282,7 @@ img.footer-logo{
     font-weight: 600;
 }
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
 }
 
 

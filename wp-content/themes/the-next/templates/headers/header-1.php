@@ -25,16 +25,16 @@
                     <div class="col-xs-12 col-sm-4 social-link-wrapper">
                         <ul class="social-links">
                             <?php if (WPEdenThemeEngine::NextGetOption('weibo_profile_url') != '') { ?>
-                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weibo_profile_url') ); ?>"><i class="fa fa-weibo"></i></a></li>
+                                <li><a target="_blank" href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weibo_profile_url') ); ?>"><i class="fa fa-weibo" style="font-size: 23px"></i></a></li>
                                 <?php } ?>
                                 <?php if (WPEdenThemeEngine::NextGetOption('weixin_profile_url') != '') { ?>
-                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weixin_profile_url') ); ?>"><i class="fa fa-weixin"></i></a></li>
+                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weixin_profile_url') ); ?>"><i class="fa fa-weixin" style="font-size: 20px"></i></a></li>
                                 <?php } ?>
                                 <?php if (WPEdenThemeEngine::NextGetOption('qq_profile_url') != '') { ?>
-                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('qq_profile_url') ); ?>"><i class="fa fa-qq"></i></a></li>
+                                <li><a style="line-height: 35px" href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('qq_profile_url') ); ?>"><i class="fa fa-qq" style="font-size: 20px"></i></a></li>
                                 <?php } ?>
                                 <?php if (WPEdenThemeEngine::NextGetOption('facebook_profile_url') != '') { ?>
-                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('facebook_profile_url') ); ?>"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('facebook_profile_url') ); ?>"><i class="fa fa-facebook" style="font-size: 23px"></i></a></li>
                                 <?php } ?>
                                 <?php if (WPEdenThemeEngine::NextGetOption('googleplus_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('googleplus_profile_url') ); ?>"><i class="fa fa-google-plus"></i></a></li>

@@ -18,18 +18,35 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 social-link-wrapper">
                             <ul class="social-links pull-left">
+                                <!-- Weibo -->
+                                <?php if (WPEdenThemeEngine::NextGetOption('weibo_profile_url') != '') { ?>
+                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weibo_profile_url') ); ?>" target="_blank" style="background-color: rgba(0, 0, 0, 0)"><i class="fa fa-weibo" style="font-size: 25px;"></i></a></li>
+                                <?php } ?>
+                                <!-- WeChat -->
+                                <?php if (WPEdenThemeEngine::NextGetOption('weixin_profile_url') != '') { ?>
+                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('weixin_profile_url') ); ?>" style="background-color: rgba(0, 0, 0, 0)"><i class="fa fa-weixin" style="font-size: 25px;"></i></a></li>
+                                <?php } ?>
+                                <!-- QQ -->
+                                <?php if (WPEdenThemeEngine::NextGetOption('qq_profile_url') != '') { ?>
+                                <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('qq_profile_url') ); ?>" style="background-color: rgba(0, 0, 0, 0)"><i class="fa fa-qq" style="font-size: 23px;"></i></a></li>
+                                <?php } ?>
+                                <!-- Facebook -->
                                 <?php if (WPEdenThemeEngine::NextGetOption('facebook_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('facebook_profile_url') ); ?>"><i class="fa fa-facebook"></i></a></li>
                                 <?php } ?>
+                                <!-- Google Plus -->
                                 <?php if (WPEdenThemeEngine::NextGetOption('googleplus_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('googleplus_profile_url') ); ?>"><i class="fa fa-google-plus"></i></a></li>
                                 <?php } ?>
+                                <!-- Twitter -->
                                 <?php if (WPEdenThemeEngine::NextGetOption('twitter_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('twitter_profile_url') ); ?>"><i class="fa fa-twitter"></i></a></li>
                                 <?php } ?>
+                                <!-- Pinterest -->
                                 <?php if (WPEdenThemeEngine::NextGetOption('pinterest_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('pinterest_profile_url') ); ?>"><i class="fa fa-pinterest"></i></a></li>
                                 <?php } ?>
+                                <!-- LinkedIn -->
                                 <?php if (WPEdenThemeEngine::NextGetOption('linkedin_profile_url') != '') { ?>
                                 <li><a href="<?php echo esc_url( WPEdenThemeEngine::NextGetOption('linkedin_profile_url') ); ?>"><i class="fa fa-linkedin"></i></a></li>
                                 <?php } ?>
@@ -59,13 +76,13 @@
             <header id="header-2" class="header">
                 <div class="container logo-and-cinfo">
                     <div class="row">
-                        <div class="col-md-4 col-xs-12">
+                        <div class="col-md-3 col-xs-12">
                             <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>"><?php echo WPEdenThemeEngine::SiteLogo(); ?></a>
 
                             <?php get_template_part('templates/menus/mobile'); ?>
 
                         </div>
-                        <div class="col-md-8 hidden-xs">
+                        <div class="col-md-9 hidden-xs">
                             <div class="page-header-contact-info">
                                 <div class="col-md-4 col-sm-4">
                                     <div class="media" style="margin-top: 26px">
@@ -73,30 +90,30 @@
                                             <i class="hico tn-email text-primary"></i>
                                         </div>
                                         <div class="media-body">
-                                            <b>Contact Us</b>
-                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_email', 'contact@site.com') ); ?>
+                                            <b>电子邮箱</b>
+                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_email', '1262542070@qq.com') ); ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-3">
+                                <div class="col-md-4 col-sm-4">
                                     <div class="media" style="margin-top: 26px">
                                         <div class="pull-left">
                                             <i class="hico tn-mobile text-info"></i>
                                         </div>
                                         <div class="media-body">
-                                            <b>Phone</b>
-                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_phone', '(123) 456-7890') ); ?>
+                                            <b>联系电话</b>
+                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_phone', '028-85924936 / 85528601') ); ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-sm-5">
+                                <div class="col-md-4 col-sm-4">
                                     <div class="media" style="margin-top: 26px">
                                         <div class="pull-left">
                                             <i class="hico tn-home text-success"></i>
                                         </div>
                                         <div class="media-body">
-                                            <b>Address</b>
-                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_address', '(123) 456-7890') ); ?>
+                                            <b>地址</b>
+                                            <?php echo sanitize_text_field( WPEdenThemeEngine::NextGetOption('contact_address', '桐梓林东路3号锦绣花园西区5-3-302') ); ?>
                                         </div>
                                     </div>
                                 </div>

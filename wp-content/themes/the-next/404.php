@@ -11,9 +11,9 @@ get_header(); ?>
                 <div <?php post_class('post'); ?>>
                     
                     <div class="clear"></div>
-                    <h1 class="entry-title"><?php _e('404, Page not found!','the-next');?></h1>
+                    <h1 class="entry-title"><?php _e('404, 找不到页面！','the-next');?></h1>
                     <div class="entry-content">
-                        <?php _e('Nothing found here! Please use navigation above or search to find what you are looking for.','the-next');?>  
+                        <?php _e('抱歉，找不到您所请求的页面...','the-next');?>  
                     </div>
 
                 </div>

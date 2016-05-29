@@ -1,6 +1,8 @@
 <?php
 do_action("thenext_before_loop");
+?>
 
+<?php
 while (have_posts()): the_post();
     ?>
     <div class="archive-item">

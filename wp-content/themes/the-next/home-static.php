@@ -60,7 +60,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Home Call TO Action Section -->
+        <!-- Home Call TO Action Section --
         <div class="col-md-12 home-cta">
 
             <div class="container">
@@ -76,7 +76,7 @@ get_header();
             </div>
         </div>
 
-        <!-- Home Features Section -->
+        -- Home Features Section --
         <div class="col-md-12 home-features">
 
             <div class="container">
@@ -125,7 +125,7 @@ get_header();
                 </div>
             </div>
         </div>
-
+    
         <!-- Home Tabbed Section -->
         
         <div class="container home-tab-intro">
