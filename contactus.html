@@ -120,37 +120,132 @@
 
         <!-- /.contact information -->
         <div id="wrapper">
-          <div id="conleft">
-          <br/>
-            <h3>&nbsp;&nbsp;&nbsp;大咖文书地址</h3>
-            <br/>
-            <br/>
-            <p>&nbsp;&nbsp;&nbsp;桐梓林东路3号锦绣花园西区5-3-302</p>
-            <br/>
-            <p>&nbsp;&nbsp;&nbsp;乘地铁：</p>
-            <br/>
-            <p>&nbsp;&nbsp;&nbsp;桐梓林站B站出口沿桐梓林北路</p>
-            <p>&nbsp;&nbsp;&nbsp;向桐梓林内走（向西）步行约10分</p>
-            <p>&nbsp;&nbsp;&nbsp;钟至桐梓林北路和桐梓林东路的</p>
-            <p>&nbsp;&nbsp;&nbsp;十字路口，左拐约20米即到。</p>
-            <br/>
-            <p>&nbsp;&nbsp;&nbsp;乘公交车：</p>
-            <br/>
-            <p>&nbsp;&nbsp;&nbsp;桐梓林B站出口出来后</p>
-            <p>&nbsp;&nbsp;&nbsp;在旁边的公交站坐1097路</p>
-            <p>&nbsp;&nbsp;&nbsp;（每10分钟一班），坐2站下车。</p>
-          </div>
+            <div id="conleft">
+                <br/>
+                <h3>&nbsp;&nbsp;&nbsp;大咖文书地址</h3>
+                <br/>
+                <br/>
+                <p>&nbsp;&nbsp;&nbsp;桐梓林东路3号锦绣花园西区5-3-302</p>
+                <br/>
+                <p>&nbsp;&nbsp;&nbsp;乘地铁：</p>
+                <br/>
+                <p>&nbsp;&nbsp;&nbsp;桐梓林站B站出口沿桐梓林北路</p>
+                <p>&nbsp;&nbsp;&nbsp;向桐梓林内走（向西）步行约10分</p>
+                <p>&nbsp;&nbsp;&nbsp;钟至桐梓林北路和桐梓林东路的</p>
+                <p>&nbsp;&nbsp;&nbsp;十字路口，左拐约20米即到。</p>
+                <br/>
+                <p>&nbsp;&nbsp;&nbsp;乘公交车：</p>
+                <br/>
+                <p>&nbsp;&nbsp;&nbsp;桐梓林B站出口出来后</p>
+                <p>&nbsp;&nbsp;&nbsp;在旁边的公交站坐1097路</p>
+                <p>&nbsp;&nbsp;&nbsp;（每10分钟一班），坐2站下车。</p>
+            </div>
 
-          <div id="conright">
-            <center>
-              <p>For</p>
-              <p>The</p>
-              <del>Horde</del>
-              <p>Location</p>
-              <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
-            </center>
+            <div id="conright">
+                <center>
+                    <p>For</p>
+                    <p>The</p>
+                    <del>Horde</del>
+                    <p>Location</p>
+                    <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+                </center>
+            </div>
+        </div>
+<<<<<<< HEAD
+=======
+
+        <!-- BEGIN # MODAL LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="img/login.png">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                        <span id="text-login-msg">用户名与密码</span>
+                                </div>
+                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                                <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">记住我
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">登录</button>
+                                </div>
+                                <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">忘记密码？</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">新用户注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End # Login Form -->
+
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
+                            <div class="modal-body">
+                                <div id="div-lost-msg">
+                                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-lost-msg">邮箱地址</span>
+                                </div>
+                                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">发送</button>
+                                </div>
+                                <div>
+                                    <button id="lost_login_btn" type="button" class="btn btn-link">登录</button>
+                                    <button id="lost_register_btn" type="button" class="btn btn-link">注册</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Lost Password Form -->
+
+                        <!-- Begin | Register Form -->
+                        <form id="register-form" style="display:none;">
+                            <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">注册新用户</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            </div>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">注册</button>
+                                </div>
+                                <div>
+                                    <button id="register_login_btn" type="button" class="btn btn-link">登录</button>
+                                    <button id="register_lost_btn" type="button" class="btn btn-link">忘记密码？</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- End | Register Form -->
+                    </div>
+                <!-- End # DIV Form -->
+            </div>
           </div>
         </div>
+        <!-- END # MODAL LOGIN -->
+
+>>>>>>> 6758c23b275fc18e67695f24f71e02a233b4f555
     </div>
     <!-- /#wrapper -->
 

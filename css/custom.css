@@ -1,5 +1,6 @@
 #wrapper {
     width: 100%;
+    background-color: #f0f0f0
 }
 
 #page-wrapper {
@@ -8,84 +9,15 @@
     background-color: #fff;
 }
 
-@media(min-width:768px) {
+.center { float: none; margin-left: auto; margin-right: auto; }
+
+@media(min-width:768px) {   
     #page-wrapper {
         position: inherit;
         margin: 0 0 0 250px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
     }
-}
-
-#topbar .navbar-nav > li > a, .navbar-brand {
-    padding-top:5px !important;
-    padding-bottom:0 !important;
-    height: 30px;
-}
-
-.navbar {min-height:30px !important;}
-
-.navbar-top-links {
-    margin-right: 0;
-}
-
-.nav > li.dropdown.active.open > a,
-.nav > li.dropdown.active.open > ul.dropdown-menu a:hover,
-.nav > li.dropdown.open > a,
-.nav > li.dropdown.open > ul.dropdown-menu a:hover
-{
-  color: #fff;
-  background-color: black;
-}
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-	color: white;
-	background-color: black;
-}
-
-.navbar-top-links li {
-    display: inline-block;
-}
-
-.navbar-top-links li:last-child {
-    margin-right: 15px;
-}
-
-.navbar-top-links li a {
-	color: gray;
-	padding-top: 5px;
-	padding-bottom: 0;
-	height: 30px;
-}
-
-.navbar-top-links .dropdown-menu li {
-    display: block;
-}
-
-.navbar-top-links .dropdown-menu li:last-child {
-    margin-right: 0;
-}
-
-.navbar-top-links .dropdown-menu li a {
-    min-height: 0;
-}
-
-.navbar-top-links .dropdown-menu li a div {
-    white-space: normal;
-}
-
-.navbar-top-links .dropdown-login {
-	background-color: #222;
-	width: 120px;
-    min-width: 0;
-    right: 0;
-    left: auto;
-}
-
-.navbar-top-links .dropdown-login .divider {
-	margin: auto;
-	background: gray;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
@@ -128,21 +60,6 @@
 
 .sidebar .nav-third-level li a {
     padding-left: 52px;
-}
-
-@media(min-width:768px) {
-    .sidebar {
-        z-index: 1;
-        position: absolute;
-        width: 250px;
-        margin-top: 51px;
-    }
-
-    .navbar-top-links .dropdown-messages,
-    .navbar-top-links .dropdown-tasks,
-    .navbar-top-links .dropdown-alerts {
-        margin-left: auto;
-    }
 }
 
 .btn-outline {
@@ -288,7 +205,7 @@
 }
 
 #login-modal input[type=text], input[type=password] {
-	margin-top: 10px;
+   margin-top: 10px;
 }
 
 #div-login-msg,
@@ -335,7 +252,6 @@
 #icon-login-msg.error,
 #icon-lost-msg.error,
 #icon-register-msg.error {
-    background-color: #eb575b !important;
 }
 
 #img_logo {
@@ -343,96 +259,75 @@
     max-width: 100px;
 }
 
-/* #########################################
-   #    override the bootstrap configs     #
-   ######################################### */
+    /* #########################################
+       #    override the bootstrap configs     #
+       ######################################### */
 
-.modal-backdrop.in {
-    filter: alpha(opacity=50);
-    opacity: .8;
-}
+       .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
 
-.modal-content {
-    background-color: #ececec;
-    border: 1px solid #bdc3c7;
-    border-radius: 0px;
-    outline: 0;
-}
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
 
-.modal-header {
-    min-height: 16.43px;
-    padding: 15px 15px 15px 15px;
-    border-bottom: 0px;
-}
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
 
-.modal-body {
-    position: relative;
-    padding: 5px 15px 5px 15px;
-}
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
 
-.modal-footer {
-    padding: 15px 15px 15px 15px;
-    text-align: left;
-    border-top: 0px;
-}
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
 
-.checkbox {
-    margin-bottom: 0px;
-}
+    .checkbox {
+        margin-bottom: 0px;
+    }
 
-.btn {
-    border-radius: 0px;
-}
+    .btn {
+        border-radius: 0px;
+    }
 
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: none;
-}
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
 
-.btn-lg, .btn-group-lg>.btn {
-    border-radius: 0px;
-}
+    .btn-lg, .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
 
-.btn-link {
-    padding: 5px 10px 0px 0px;
-    color: #95a5a6;
-}
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
 
-.btn-link:hover, .btn-link:focus {
-    color: #2c3e50;
-    text-decoration: none;
-}
+    .btn-link:hover, .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
 
-.glyphicon {
-    top: 0px;
-}
+    .glyphicon {
+        top: 0px;
+    }
 
-.form-control {
-  border-radius: 0px;
-}
-
-/*login CSS Ends*/
-
-/*Begin cube CSS*/
-
-#conleft {
-  background-color:#ffff99;
-  height:1000px;
-  width:20%;
-  float:left;
-}
-
-#conright {
-  background-color:#EEEEEE;
-  height:1000px;
-  width:80%;
-  float:left;
-}
-
+<<<<<<< HEAD
 #cube{
   height: 550px;
   width: 25%;
@@ -459,3 +354,36 @@
 .forum.table th.cell-stat-2x {
     width: 14em;
 }
+=======
+    .form-control {
+      border-radius: 0px;
+  }
+
+  /*login CSS Ends*/
+
+  /*Begin cube CSS*/
+
+  #conleft {
+      background-color:#ffff99;
+      height:1000px;
+      width:20%;
+      float:left;
+  }
+
+  #conright {
+      background-color:#EEEEEE;
+      height:1000px;
+      width:80%;
+      float:left;
+  }
+
+  #cube{
+      height: 550px;
+      width: 25%;
+      float: left;
+      border-top: 10px solid white;
+      border-right: 10px solid white;
+      border-bottom: 10px solid white;
+      border-left: 10px solid white;
+  }
+>>>>>>> 6758c23b275fc18e67695f24f71e02a233b4f555
